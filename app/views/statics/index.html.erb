@@ -1,0 +1,44 @@
+<section id="main">
+	<div class="gradient-wood gradient-left"></div>
+	<div class="gradient-wood gradient-right"></div>
+  <article id="sliders">
+    <div class="slider_balls">
+      <ul>
+        <li class="ball item_1 active"><a href="#"></a></li>
+        <li class="ball item_2"><a href="#"></a></li>
+      </ul>
+    </div>
+    <section class="slider">
+      <img src="<%= image_path("slider/slider_1.jpg") %>" class="item_1">
+      <img src="<%= image_path("slider/slider_2.jpg") %>" class="item_2">
+    </section>
+  </article>
+  <% if @new.present? %>
+    <article id="promotion">
+      <div class="content">
+        <h2>Promotion</h2>
+        <p><%= @new.news %></p>
+      </div>
+    </article>
+  <% end %>
+  <article id="presentation">
+    <div class="col-6 left">
+      <div class="col-content">
+        <h2>Infinity institut</h2>
+        <p>Lorem ipsum content text test Lorem conten saher ertes flela else thjem, althis 1080.</p>
+        <p>Test content lorem ipsum, je veux test let conteu de ma page et les texte, histoire de voir si c’est jolie ou pas.</p>
+        <p>Institut de beauté fondé en 2014 et je me demande se que je vais écrire</p>
+      </div>
+    </div>
+    <div class="col-6 right">
+      <div class="col-content">
+        <%= image_tag 'profil-pic.png' %>
+      </div>
+    </div>
+  </article>
+  <article id="prestations">
+    <div class="content">
+      <h2>Prestations</h2>
+    </div>
+  </article>
+</section>

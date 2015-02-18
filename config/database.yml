@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: infinity
+
+test:
+  <<: *default
+  database: infinity
+
+production:
+  <<: *default
+  database: infinity
+  username:
+  password:
