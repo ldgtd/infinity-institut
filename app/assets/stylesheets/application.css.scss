@@ -30,7 +30,7 @@ article {
 
 header {
 	height: 667px;
-	background-image: url('background-header.jpg');
+	background-image: url('<%= asset_path("background-header.jpg") %>');
 	position: relative;
 
 	h1 {
@@ -112,7 +112,7 @@ header {
 section#main {
 	width: 1000px;
 	height: 1500px;
-	background-image: url('background-wood.png');
+	background-image: url('<%= asset_path("background-wood.png") %>');
 	position: relative;
 
 
