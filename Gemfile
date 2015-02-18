@@ -5,6 +5,11 @@ gem 'rails', '4.2.0'
 # database
 gem 'pg'
 
+# compil asset in prod
+group :production do
+	gem 'rails_12factor'
+end
+
 # gem 'devise'
 
 # assets
