@@ -10,7 +10,7 @@ group :production do
 	gem 'rails_12factor'
 end
 
-# gem 'devise'
+gem 'devise'
 
 # assets
 gem 'sass-rails', '~> 5.0'

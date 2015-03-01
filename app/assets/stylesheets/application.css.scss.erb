@@ -6,10 +6,21 @@
 @import "compass/typography/text/replacement";
 @import "compass/typography/lists/horizontal-list";
 
+/* FONT */
+@import url(http://fonts.googleapis.com/css?family=Poiret+One|Roboto:400,300,500,700,300italic,400italic,500italic|Julius+Sans+One);
+
 /* COLORS */
 $red: #70261c;
 
 /* DEFAULT */
+
+body {
+	font-family: 'Roboto';
+}
+
+h2 {
+	font-family: 'Poiret One';
+}
 
 header, .content {
 	width: 1000px;
@@ -40,7 +51,7 @@ header {
 
 	nav {
 		width: 1000px;
-		padding: 20px 0px;
+		padding: 21px 0px;
 		float: left;
 		background-color: $red;
 		position: absolute;
@@ -54,8 +65,9 @@ header {
 				display: inline-block;
 
 				a {
+					font-family: 'Julius Sans One';
 					color: white;
-					font-size: 1.6em;
+					font-size: 1.5em;
 					font-weight: 300;
 					text-decoration: none;
 					padding: 0px 50px 10px 10px;
@@ -105,21 +117,22 @@ header {
 }
 
 .gradient-right {
-	right: -51px;
+	right: -50px;
 	@include background-image(linear-gradient(to right, #cac9c9, #e6e5e4, #fff));
 }
 
 section#main {
-	width: 1000px;
-	height: 1500px;
+	width: 999px;
+	height: 1800px;
 	background-image: url('<%= asset_path("background-wood.png") %>');
 	position: relative;
+	margin-right: 0px !important;
 
 
 /* SLIDER */
 
 	#sliders {
-	  height: 500px;
+	  height: 600px;
 	  position: relative;
 
 	  .slider_balls {
@@ -148,7 +161,7 @@ section#main {
 	  }
 
 	  .slider {
-	    height: 500px;
+	    height: 643px;
 	    position: relative;
 	    overflow: hidden;
 
@@ -165,6 +178,53 @@ section#main {
 	      }
 	    }
 	  }
+	}
+
+/* PRESENTATION */
+
+	#presentation {
+		height: 313px;
+		position: absolute;
+		top: 240px;
+
+		.fill-title {
+			width: 435px;
+			height: 70px;
+			position: relative;
+			top: 60px;
+			left: -50px;
+			background-color: white;
+			@include opacity(0.5);
+			z-index: 8;
+		}
+
+		.fill-text {
+			width: 695px;
+			height: 130px;
+			position: relative;
+			top: 20px;
+			left: -50px;
+			background-color: white;
+			@include opacity(0.5);
+			z-index: 8;
+		}
+
+		h2 {
+			position: relative;
+			font-size: 3em;
+			color: $red;
+			margin-bottom: 20px;
+			z-index: 10;
+		}
+
+		p {
+			width: 600px;
+			position: relative;
+			top: -89px;
+			line-height: 23px;
+			font-weight: 300;
+			z-index: 10;
+		}
 	}
 
 /* PROMOTION */
@@ -185,45 +245,6 @@ section#main {
 		}
 	}
 
-/* PRESENTATION */
-
-	#presentation {
-		height: 313px;
-
-		h2 {
-			font-size: 3em;
-			color: $red;
-			margin-bottom: 20px;
-		}
-
-		.col-6 {
-			height: 200px;
-			float: left;
-		}
-
-		.left {
-			width: 50%;
-
-			.col-content {
-				margin-left: 50px;
-				padding-right: 15px;
-
-				p {
-					font-size: 1.5em;
-					margin-bottom: 20px;
-				}
-			}
-		}
-
-		.right {
-			width: 40%;
-
-			.col-content {
-				margin-left: 80px;
-				padding-left: 15px;
-			}
-		}
-	}
 
 /* PRESTATIONS */
 
@@ -232,6 +253,81 @@ section#main {
 			font-size: 3em;
 			color: $red;
 			margin-bottom: 20px;
+		}
+
+		.prestation {
+		  ul {
+		    li {
+		    	width: 600px;
+		      overflow: hidden;
+		      border: 3px solid $red;
+		      color: $red;
+		      padding: 10px 10px;
+		      margin-top: 10px;
+		      cursor: pointer;
+
+		      .price {
+		        font-weight: normal;
+		        float: right;
+		        margin-right: 10px;
+		        color: black;
+		      }
+
+		      .more {
+		        height: 10px;
+		        font-size: 1em;
+		        font-weight: bold;
+		        color: $red;
+		        float: right;
+
+		        a.more_link {
+		          text-decoration: none;
+		        }
+		      }
+
+		      .container {
+		        width: 550px;
+		        padding: 10px 10px;
+		        display: none;
+
+		        p {
+		          font-size: 1em;
+		          font-weight: normal;
+		          margin-bottom: 10px;
+		        }
+
+		        .bold {
+		        	color: black;
+		          font-weight: 400;
+		        }
+		      }
+		    }
+		  }
+		}
+
+		.man-woman {
+			h3 {
+				color: $red;
+				font-size: 1.4em;
+			}
+		}
+
+		.woman {
+			margin-top: 40px;
+
+			h3 {
+				color: $red;
+				font-size: 1.4em;
+			}
+		}
+
+		.man {
+			margin-top: 40px;
+
+			h3 {
+				color: $red;
+				font-size: 1.4em;
+			}
 		}
 	}
 }

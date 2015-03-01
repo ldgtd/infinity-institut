@@ -30,6 +30,31 @@ $(function() {
     $(window).scroll(stickyMenu);
   }
 
+  // menu toggle
+  if ($('.man-woman, .woman, .man').find('li:has(.container)')) {
+    $('.man-woman, .woman, .man').find('li:has(.container)').find('.more_link').append('+');
+    $('.man-woman, .woman, .man').find('li').on('click', function() {
+      event.preventDefault();
+
+      var $this = $(this);
+
+      if ($this.hasClass('active')) {
+        $this.find('.container').slideUp('slow', function() {
+          $this.removeClass('active');
+          $this.find('.more_link').html('+');
+        });
+      } else {
+        $('#prestations li.active .container').slideUp('slow');
+        $('#prestations li.active .more .more_link').html('+');
+        $('#prestations li.active').removeClass('active');
+        $this.find('.container').slideDown('slow', function() {
+          $this.addClass('active');
+          $this.find('.more_link').html('-');
+        });
+      }
+    });
+  }
+
   // gradient height
   $('.gradient-wood').css('height', $('body').height() + 'px');
 });
