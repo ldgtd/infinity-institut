@@ -1,0 +1,13 @@
+<%= link_to "Déconnexion", destroy_admin_session_path, method: "delete", class: "btn btn-danger logout" %>
+<section>
+	<article>
+		<h2>Gestion de la news :</h2>
+		<% if @new.present? %>
+			<%= @new.news %><br /><br />
+			<%= link_to 'Mettre à jour', edit_admin_news_path(@new.id), class: 'btn btn-success' %>
+			<%= link_to 'Delete', admin_news_path(@new.id), method: :delete, class: 'btn btn-danger' %>
+		<% else %>
+			<%= link_to 'Céer une news', new_admin_news_path, class: 'btn btn-success' %>
+		<% end %>
+	</article>
+</section>

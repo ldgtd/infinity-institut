@@ -1,0 +1,5 @@
+<%= form_for(["admin", @new], url: { action: :create }) do |f| %>
+	<%= f.label "news" %><br />
+	<%= f.text_area "news", class: "news-area" %><br /><br />
+	<%= f.submit 'Créer la news', class: 'btn btn-success' %>
+<% end %>

@@ -1,0 +1,5 @@
+<%= form_for(["admin", @new]) do |f| %>
+	<%= f.label "news" %><br />
+	<%= f.text_area "news", class: "news-area" %><br /><br />
+	<%= f.submit 'Mettre à jour à la news', class: 'btn btn-success' %>
+<% end %>

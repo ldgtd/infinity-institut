@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Infinity Institut</title>
+  <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track' => false %>
+  <%= javascript_include_tag 'admin', 'data-turbolinks-track' => false %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="content">
+    <h1>Admin Infinity Institut</h1>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+		<%= yield %>
+	</div>
+</body>
+</html>
