@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 		resources :news
   end
 
-  root 'statics#index'
+  resource :static, only: [:show, :create]
+
+  root 'statics#show'
 end

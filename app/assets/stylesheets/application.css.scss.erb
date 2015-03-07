@@ -123,7 +123,8 @@ header {
 
 section#main {
 	width: 999px;
-	height: 1800px;
+	height: 2500px;
+	/*2757px*/
 	background-image: url('<%= asset_path("background-wood.png") %>');
 	position: relative;
 	margin-right: 0px !important;
@@ -230,7 +231,7 @@ section#main {
 /* PROMOTION */
 
 	#promotion {
-		height: 200px;
+		height: auto;
 		background-color: $red;
 
 		h2 {
@@ -328,6 +329,80 @@ section#main {
 				color: $red;
 				font-size: 1.4em;
 			}
+		}
+	}
+
+/* CONTACT */
+
+	#contact {
+		height: 365px;
+		position: relative;
+
+		h2 {
+			font-size: 3em;
+			color: $red;
+			margin-bottom: 20px;
+		}
+
+		.col-left {
+			width: 50%;
+			float: left;
+
+			.new_contact {
+				input {
+					width: 230px;
+					height: 25px;
+					margin-bottom: 20px;
+				}
+
+				textarea {
+					width: 330px;
+					height: 100px;
+					margin-bottom: 20px;
+				}
+
+				.action {
+					input {
+						width: 100px;
+						cursor: pointer;
+					}
+
+				.btn-success {
+					color:#fff;background-color:#5cb85c;border-color:#4cae4c
+					}
+					.btn-success:hover,.btn-success:focus,.btn-success.focus,.btn-success:active,.btn-success.active,.open>.dropdown-toggle.btn-success {
+						color:#fff;background-color:#449d44;border-color:#398439
+					}
+				}
+			}
+		}
+
+		.col-right {
+			width: 50%;
+			float: right;
+
+			p {
+				line-height: 25px;
+
+				.day {
+					display: inline-block;
+					width: 100px;
+				}
+
+				.afternoon {
+					margin-left: 106px;
+				}
+			}
+		}
+
+		i.bamboo {
+			display: block;
+			width: 1000px;
+			height: 72px;
+			position: absolute;
+			bottom: -100px;
+			left: 0px;
+			background-image: url('<%= asset_path("bamboo.png") %>');
 		}
 	}
 }
