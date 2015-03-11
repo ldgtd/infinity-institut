@@ -19,6 +19,8 @@ var stickyMenu = function() {
 };
 
 $(function() {
+  var that = this;
+
   // init slider
   var slider = new Slider();
   slider.start();
@@ -29,6 +31,16 @@ $(function() {
     stickyMenu();
     $(window).scroll(stickyMenu);
   }
+
+    // smooth scroll to anchor & active nav
+    $('header a').on('click', function(event) {
+      event.preventDefault();
+      var anchor = $(this);
+
+      $('html, body').animate({
+        scrollTop: $('#' + anchor.attr('href')).offset().top - 85
+      }, 1500);
+    });
 
   // menu toggle
   if ($('.man-woman, .woman, .man').find('li:has(.container)')) {
