@@ -123,8 +123,7 @@ header {
 
 section#main {
 	width: 999px;
-	height: 2500px;
-	/*2757px*/
+	height: 3400px;
 	background-image: url('<%= asset_path("background-wood.png") %>');
 	position: relative;
 	margin-right: 0px !important;
@@ -186,7 +185,11 @@ section#main {
 	#presentation {
 		height: 313px;
 		position: absolute;
-		top: 240px;
+		top: 200px;
+
+		.content {
+			height: 300px;
+		}
 
 		.fill-title {
 			width: 435px;
@@ -201,7 +204,7 @@ section#main {
 
 		.fill-text {
 			width: 695px;
-			height: 130px;
+			height: 190px;
 			position: relative;
 			top: 20px;
 			left: -50px;
@@ -221,10 +224,26 @@ section#main {
 		p {
 			width: 600px;
 			position: relative;
-			top: -89px;
+			top: -148px;
 			line-height: 23px;
 			font-weight: 300;
 			z-index: 10;
+		}
+	}
+
+	#presentation-1 {
+		height: 370px;
+
+		h2 {
+			font-size: 3em;
+			color: $red;
+			margin-bottom: 20px;
+		}
+
+		p {
+			line-height: 23px;
+			font-weight: 300;
+			margin-bottom: 10px;
 		}
 	}
 
@@ -242,7 +261,9 @@ section#main {
 
 		p {
 			color: white;
-			font-size: 1.5em;
+			font-size: 1.2em;
+			font-weight: 300;
+			line-height: 27px;
 		}
 	}
 
@@ -344,6 +365,10 @@ section#main {
 			margin-bottom: 20px;
 		}
 
+		.row {
+			@include pie-clearfix;
+		}
+
 		.col-left {
 			width: 50%;
 			float: left;
@@ -381,6 +406,12 @@ section#main {
 			width: 50%;
 			float: right;
 
+			h4 {
+				font-size: 1.5em;
+				color: $red;
+				margin-bottom: 10px;
+			}
+
 			p {
 				line-height: 25px;
 
@@ -395,12 +426,30 @@ section#main {
 			}
 		}
 
-		i.bamboo {
+    #map {
+    	position: absolute;
+    	left: 0px;
+      width: 1000px;
+      height: 400px;
+      margin: 61px 0px 40px 0px;
+    }
+
+		i.bamboo-top {
 			display: block;
 			width: 1000px;
 			height: 72px;
 			position: absolute;
-			bottom: -100px;
+			bottom: -82px;
+			left: 0px;
+			background-image: url('<%= asset_path("bamboo.png") %>');
+		}
+
+		i.bamboo-bottom {
+			display: block;
+			width: 1000px;
+			height: 72px;
+			position: absolute;
+			bottom: -527px;
 			left: 0px;
 			background-image: url('<%= asset_path("bamboo.png") %>');
 		}

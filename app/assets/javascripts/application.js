@@ -54,8 +54,8 @@ $(function() {
         $this.find('.container').slideUp('slow', function() {
           $this.removeClass('active');
           $this.find('.more_link').html('+');
-          $('section#main').css('height', '2500px');
-          $('.gradient-wood').css('height', '3167px');
+          $('section#main').css('height', '3400px');
+          $('.gradient-wood').css('height', '4065px');
         });
       } else {
         $('#prestations li.active .container').slideUp('slow');
@@ -65,8 +65,8 @@ $(function() {
           $this.addClass('active');
           $this.find('.more_link').html('-');
           var additinoalHeight = $this.height();
-          var totalHeight = additinoalHeight + 2500;
-          var totalHeightGradient = additinoalHeight + 3166;
+          var totalHeight = additinoalHeight + 3400;
+          var totalHeightGradient = additinoalHeight + 4075;
 
           $('section#main').css('height', totalHeight + 'px');
           $('.gradient-wood').css('height', totalHeightGradient + 'px');
