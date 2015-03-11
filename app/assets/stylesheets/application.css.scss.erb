@@ -376,11 +376,12 @@ section#main {
 			.new_contact {
 				input {
 					width: 230px;
-					height: 25px;
+					height: 35px;
 					margin-bottom: 20px;
 				}
 
 				textarea {
+					resize: none;
 					width: 330px;
 					height: 100px;
 					margin-bottom: 20px;
@@ -392,11 +393,20 @@ section#main {
 						cursor: pointer;
 					}
 
-				.btn-success {
-					color:#fff;background-color:#5cb85c;border-color:#4cae4c
+					.btn-success {
+						width: 200px;
+						height: 50px;
+						@include border-radius(15px, 15px);
+						color:#fff;
+						border: none;
+						font-size: 1.2em;
+						background-color:#5cb85c;
 					}
-					.btn-success:hover,.btn-success:focus,.btn-success.focus,.btn-success:active,.btn-success.active,.open>.dropdown-toggle.btn-success {
-						color:#fff;background-color:#449d44;border-color:#398439
+
+					.btn-success:hover,.btn-success:focus,.btn-success.focus,.btn-success:active,.btn-success.active {
+						color:#fff;
+						background-color:#449d44;
+						border-color:#398439;
 					}
 				}
 			}
@@ -413,7 +423,7 @@ section#main {
 			}
 
 			p {
-				line-height: 25px;
+				line-height: 28px;
 
 				.day {
 					display: inline-block;
@@ -431,7 +441,7 @@ section#main {
     	left: 0px;
       width: 1000px;
       height: 400px;
-      margin: 61px 0px 40px 0px;
+      margin: 100px 0px 40px 0px;
     }
 
 		i.bamboo-top {
@@ -439,7 +449,7 @@ section#main {
 			width: 1000px;
 			height: 72px;
 			position: absolute;
-			bottom: -82px;
+			bottom: -163px;
 			left: 0px;
 			background-image: url('<%= asset_path("bamboo.png") %>');
 		}
@@ -449,9 +459,18 @@ section#main {
 			width: 1000px;
 			height: 72px;
 			position: absolute;
-			bottom: -527px;
+			bottom: -581px;
 			left: 0px;
 			background-image: url('<%= asset_path("bamboo.png") %>');
 		}
+	}
+
+	.background-footer {
+		display: block;
+		width: 1000px;
+		height: 392px;
+		position: absolute;
+		bottom: 0px;
+		background-image: url('<%= asset_path("background-footer.png") %>');
 	}
 }
