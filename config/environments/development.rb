@@ -9,6 +9,16 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :user_name      => 'app33738336@heroku.com',
+    :password       => '9jbpc0bw',
+    :domain         => 'heroku.com',
+    :enable_starttls_auto => true
+  }
+
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
