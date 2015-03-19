@@ -33,7 +33,7 @@ $(function() {
   }
 
     // smooth scroll to anchor & active nav
-    $('header a').on('click', function(event) {
+    $('header li > a').on('click', function(event) {
       event.preventDefault();
       var anchor = $(this);
 
