@@ -46,7 +46,6 @@ $(function() {
   if ($('.man-woman, .woman, .man').find('li:has(.container)')) {
     $('.man-woman, .woman, .man').find('li:has(.container)').find('.more_link').append('+');
     $('.man-woman, .woman, .man').find('li').on('click', function() {
-      event.preventDefault();
 
       var $this = $(this);
 
