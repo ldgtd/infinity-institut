@@ -11,6 +11,7 @@ group :production do
 end
 
 gem 'devise'
+gem 'figaro'
 
 # assets
 gem 'sass-rails', '~> 5.0'
